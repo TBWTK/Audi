@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Audi.Theme">
+    <Style x:Key="styleTextBlock" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Microsoft JhengHei UI Light"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="#15133C"/>
+    </Style>
+
+    <Style x:Key="styleTextBlockHead" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="Marvin Visions"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="Foreground" Value="#15133C"/>
+    </Style>
+
+</ResourceDictionary>
