@@ -5,7 +5,7 @@
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="FontFamily" Value="Calibri"/>
-        <Setter Property="Background" Value="#f2e2cd"/>
+        <Setter Property="Background" Value="#EC994B"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Audi.Model;
 
 namespace Audi.View.AuthenticationView
 {
@@ -61,34 +62,32 @@ namespace Audi.View.AuthenticationView
         {
             if (PassPassBoxOne.Password != "" && PassPassBoxTwo.Password != "" && (PassPassBoxOne.Password == PassPassBoxTwo.Password) && LoginTextBox.Text != "")
             {
-                //try
-                //{
-                //    using (var context = new TireServiceEntities())
-                //    {
-                //        var status = context.Statuses.SingleOrDefault(x => x.NameStatus == "Активен");
-                //        var std = new Users()
-                //        {
-                //            Login = LoginTextBox.Text,
-                //            Password = PassPassBoxOne.Password.Trim(),
-                //            Status = status.Id
-                //        };
-                //        context.Users.Add(std);
-                //        context.SaveChanges();
+                try
+                {
+                    using (var context = new SalesAudiEntities())
+                    {
+                        var std = new Users()
+                        {
+                            Login = LoginTextBox.Text,
+                            Password = PassPassBoxOne.Password.Trim(),
+                        };
+                        context.Users.Add(std);
+                        context.SaveChanges();
 
-                //        var us = context.Users.SingleOrDefault(x => x.Login == LoginTextBox.Text);
-                //        if (us != null)
-                //        {
-                //            MainView.MainWindow mainWindow = new MainView.MainWindow(us.Id);
-                //            timer.Stop();
-                //            this.Close();
-                //            mainWindow.Show();
-                //        }
-                //    }
-                //}
-                //catch
-                //{
-                //    MessageBox.Show("Логин существууте, введите другой логин!");
-                //}
+                        var us = context.Users.SingleOrDefault(x => x.Login == LoginTextBox.Text);
+                        if (us != null)
+                        {
+                            MainView.MainWindow mainWindow = new MainView.MainWindow(us.Id);
+                            timer.Stop();
+                            this.Close();
+                            mainWindow.Show();
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Логин существует, введите другой логин!");
+                }
             }
             else
             {

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Audi.Model;
 
 namespace Audi.View.AuthenticationView
 {
@@ -50,40 +51,41 @@ namespace Audi.View.AuthenticationView
         // Вход в приложение
         private void EnterSystem(object sender, RoutedEventArgs e)
         {
-            //if (iteratorLogin < 2)
-            //{
-            //    using (var context = new TireServiceEntities())
-            //    {
-            //        var us = context.Users.SingleOrDefault(x => x.Login == LoginTextBox.Text && x.Password == PassPassBox.Password.Trim());
-            //        if (us != null)
-            //        {
-            //            if (us.Statuses.NameStatus == "Активен")
-            //            {
-            //                MainView.MainWindow main = new MainView.MainWindow(us.Id);
-            //                main.Show();
-            //                timer.Stop();
-            //                this.Close();
-            //            }
-            //            else
-            //            {
-            //                iteratorLogin++;
-            //                MessageBox.Show("Пользователь неактивен обратитесь к администратору");
-            //            }
-            //        }
-            //        else
-            //        {
-            //            iteratorLogin++;
-            //            MessageBox.Show("Неверные данные или пользователя не существует!");
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    BorderLogin.Visibility = Visibility.Hidden;
-            //    iteratorLogin = 0;
-            //    BorderCaptcha.Visibility = Visibility.Visible;
-            //    LoadContentCapha();
-            //}
+            if (iteratorLogin < 2)
+            {
+                using (var context = new SalesAudiEntities())
+                {
+                    var us = context.Users.SingleOrDefault(x => x.Login == LoginTextBox.Text && x.Password == PassPassBox.Password.Trim());
+                    if (us != null)
+                    {
+                        MainView.MainWindow main = new MainView.MainWindow(us.Id);
+                        main.Show();
+                        timer.Stop();
+                        this.Close();
+                        //if (us.Roles != null)
+                        //{
+
+                        //}
+                        //else
+                        //{
+                        //    iteratorLogin++;
+                        //    MessageBox.Show("Пользователь неактивен обратитесь к администратору");
+                        //}
+                    }
+                    else
+                    {
+                        iteratorLogin++;
+                        MessageBox.Show("Неверные данные или пользователя не существует!");
+                    }
+                }
+            }
+            else
+            {
+                BorderLogin.Visibility = Visibility.Hidden;
+                iteratorLogin = 0;
+                BorderCaptcha.Visibility = Visibility.Visible;
+                LoadContentCapha();
+            }
         }
 
 

@@ -14,7 +14,7 @@
 
         <Border Background="Transparent" CornerRadius="20" x:Name="BorderLogin" Visibility="Visible" Margin="0 50">
             <StackPanel Margin="50">
-                <TextBlock Text="Вход в систему" Style="{StaticResource c}" HorizontalAlignment="Center" Margin="10"/>
+                <TextBlock Text="Вход в систему" Style="{StaticResource styleTextBlockHead }" HorizontalAlignment="Center" Margin="10"/>
 
                 <TextBlock Text="Введите логин" Style="{StaticResource styleTextBlock}" HorizontalAlignment="Center" Margin="10"/>
                 <Border Background="#F1EEE9" Margin="10" CornerRadius="10" Height="40" Width="320" HorizontalAlignment="Center">

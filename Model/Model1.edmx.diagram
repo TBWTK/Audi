@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a4851155801d4d6ba98bd58d286c8888" Name="Diagram1">
+        <EntityTypeShape EntityType="SalesAudiModel.Attributes" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Basket" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Bodys" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Cars" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Categories" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.CategoryRank" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Genders" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Generations" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Images" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Models" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Orders" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.PaymentType" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.ProductAttributes" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Products" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Roles" Width="1.5" PointX="0.75" PointY="20.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.StatusOrder" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Units" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SalesAudiModel.Users" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <AssociationConnector Association="SalesAudiModel.FK_ProductAttributes_Attributes" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Basket_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Basket_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Cars_Bodys" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Cars_Generations" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Cars_Models" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Products_Cars" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Caategories_CaategoryRank" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Categories_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Users_Genders" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Products_Images" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Orders_PaymentType" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Orders_StatusOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_ProductAttributes_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_ProductAttributes_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="SalesAudiModel.FK_Users_Roles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
